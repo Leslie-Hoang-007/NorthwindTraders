@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Category>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Northwind offers foods in these categories</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                
+            </th>
+            <th>
+                
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+
+            </td>
+            <td>
+               <b> @Html.DisplayFor(modelItem => item.CategoryName)</b>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+          
+        </tr>
+}
+    </tbody>
+</table>
